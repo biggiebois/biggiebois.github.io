@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biggie Bois Haul & Removal — Job Request</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f5f3; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding: 2rem 1rem; color: #222; }
+  .wrap { max-width: 600px; margin: 0 auto; }
+  .header { background: #2C2C2A; border-radius: 12px 12px 0 0; padding: 1.5rem 1.75rem; }
+  .header h1 { font-size: 20px; font-weight: 500; color: #F1EFE8; margin-bottom: 4px; }
+  .header p { font-size: 13px; color: #B4B2A9; }
+  .card { background: #fff; border: 0.5px solid #e0e0e0; border-top: none; border-radius: 0 0 12px 12px; padding: 1.75rem; }
+  .section-label { font-size: 12px; font-weight: 500; color: #888780; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 1rem; }
+  .section { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 0.5px solid #e8e8e8; }
+  .section:last-of-type { border-bottom: none; margin-bottom: 0; }
+  .field { margin-bottom: 1rem; }
+  .field:last-child { margin-bottom: 0; }
+  label { display: block; font-size: 13px; color: #555; margin-bottom: 6px; }
+  input[type="text"], input[type="tel"], input[type="email"], textarea, select {
+    width: 100%; padding: 10px 12px; border: 0.5px solid #d0d0d0; border-radius: 8px;
+    font-size: 14px; font-family: inherit; color: #222; background: #fff;
+    appearance: none; outline: none; transition: border-color 0.15s;
+  }
+  input:focus, textarea:focus, select:focus { border-color: #888; }
+  textarea { resize: vertical; min-height: 90px; line-height: 1.5; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .checkbox-group { display: flex; flex-direction: column; gap: 8px; }
+  .check { display: flex; align-items: center; gap: 10px; font-size: 14px; cursor: pointer; }
+  .check input[type="checkbox"] { width: 16px; height: 16px; margin: 0; cursor: pointer; accent-color: #2C2C2A; }
+  .radio-group { display: flex; gap: 12px; flex-wrap: wrap; }
+  .radio { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
+  .radio input[type="radio"] { width: 16px; height: 16px; margin: 0; accent-color: #2C2C2A; }
+  .photo-note { background: #f5f5f3; border-radius: 8px; padding: 12px 14px; font-size: 13px; color: #666; line-height: 1.5; border: 0.5px solid #e0e0e0; }
+  .photo-note strong { color: #333; }
+  .submit-btn { width: 100%; padding: 13px; background: #2C2C2A; color: #F1EFE8; border: none; border-radius: 8px; font-size: 15px; font-weight: 500; font-family: inherit; cursor: pointer; margin-top: 1.5rem; transition: background 0.15s; }
+  .submit-btn:hover { background: #444441; }
+  .submit-btn:disabled { background: #888; cursor: not-allowed; }
+  .confirm { display: none; background: #fff; border: 0.5px solid #e0e0e0; border-radius: 12px; padding: 2rem; text-align: center; }
+  .confirm h2 { font-size: 20px; font-weight: 500; margin-bottom: 8px; }
+  .confirm p { font-size: 14px; color: #666; line-height: 1.6; }
+  .error-msg { display: none; background: #fff0f0; border: 0.5px solid #f0c0c0; border-radius: 8px; padding: 12px 14px; font-size: 13px; color: #c00; margin-top: 1rem; }
+  @media (max-width: 480px) { .row { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div id="form-wrap">
+    <div class="header">
+      <h1>Biggie Bois Haul & Removal</h1>
+      <p>Fill out this form and we'll get back to you with a quote. Takes about 2 minutes.</p>
+    </div>
+
+    <div class="card">
+      <form action="https://formspree.io/f/mykbvkjd" method="POST" id="intake-form">
+
+        <div class="section">
+          <p class="section-label">Your info</p>
+          <div class="row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(779) 000-0000" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email (optional)</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com">
+          </div>
+          <div class="field">
+            <label for="street">Street address</label>
+            <input type="text" id="street" name="street" placeholder="123 Main St" required>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" placeholder="Rockford" required>
+            </div>
+            <div class="field">
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" placeholder="IL" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="zip">Zip code</label>
+            <input type="text" id="zip" name="zip" placeholder="61101" required>
+          </div>
+        </div>
+
+        <div class="section">
+          <p class="section-label">What needs to go?</p>
+          <div class="field">
+            <label for="items">List the items to be removed</label>
+            <textarea id="items" name="items" placeholder="e.g. couch, dresser, old mattress, boxes of junk, broken TV..." required></textarea>
+          </div>
+          <div class="field">
+            <label>Where are the items located? (check all that apply)</label>
+            <div class="checkbox-group">
+              <label class="check"><input type="checkbox" name="location" value="Garage"> Garage</label>
+              <label class="check"><input type="checkbox" name="location" value="Basement"> Basement</label>
+              <label class="check"><input type="checkbox" name="location" value="Main floor / living area"> Main floor / living area</label>
+              <label class="check"><input type="checkbox" name="location" value="Upstairs"> Upstairs</label>
+              <label class="check"><input type="checkbox" name="location" value="Outside / yard"> Outside / yard</label>
+              <label class="check"><input type="checkbox" name="location" value="Other"> Other</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Are there any stairs involved?</label>
+            <div class="radio-group">
+              <label class="radio"><input type="radio" name="stairs" value="No"> No</label>
+              <label class="radio"><input type="radio" name="stairs" value="Yes — going up"> Yes — going up</label>
+              <label class="radio"><input type="radio" name="stairs" value="Yes — going down"> Yes — going down</label>
+              <label class="radio"><input type="radio" name="stairs" value="Yes — both"> Yes — both</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Any especially heavy or oversized items?</label>
+            <div class="checkbox-group">
+              <label class="check"><input type="checkbox" name="heavy_items" value="Appliances (washer, dryer, fridge, etc.)"> Appliances (washer, dryer, fridge, etc.)</label>
+              <label class="check"><input type="checkbox" name="heavy_items" value="Piano"> Piano</label>
+              <label class="check"><input type="checkbox" name="heavy_items" value="Safe"> Safe</label>
+              <label class="check"><input type="checkbox" name="heavy_items" value="Treadmill / exercise equipment"> Treadmill / exercise equipment</label>
+              <label class="check"><input type="checkbox" name="heavy_items" value="None"> None of the above</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <p class="section-label">Estimate & scheduling</p>
+          <div class="field">
+            <label for="load">How much stuff roughly?</label>
+            <select id="load" name="load_estimate">
+              <option value="">— Select an estimate —</option>
+              <option>Just a few items (minimum load)</option>
+              <option>About a quarter truck</option>
+              <option>About half a truck</option>
+              <option>Three-quarters of a truck</option>
+              <option>Full truck load or more</option>
+              <option>Not sure — need you to take a look</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Preferred date (if you have one)</label>
+            <select id="date" name="preferred_date">
+              <option value="">— Select an available date —</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Preferred time</label>
+            <div class="radio-group">
+              <label class="radio"><input type="radio" name="preferred_time" value="Morning (8am–12pm)"> Morning</label>
+              <label class="radio"><input type="radio" name="preferred_time" value="Afternoon (12pm–5pm)"> Afternoon</label>
+              <label class="radio"><input type="radio" name="preferred_time" value="Flexible"> Flexible</label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="notes">Anything else we should know?</label>
+            <textarea id="notes" name="notes" placeholder="Tight driveway, gate code, fragile items nearby, etc."></textarea>
+          </div>
+        </div>
+
+        <div class="section">
+          <p class="section-label">Photos</p>
+          <div class="photo-note">
+            <strong>Please text 2–3 photos to (779) 269-7043</strong> after submitting — photos of the items and the space help us give you the most accurate quote and confirm we can fit everything in one trip.
+          </div>
+        </div>
+
+        <div class="error-msg" id="error-msg">Something went wrong. Please try again or text us directly at (779) 269-7043.</div>
+        <button type="submit" class="submit-btn" id="submit-btn">Submit job request</button>
+
+      </form>
+    </div>
+  </div>
+
+  <div class="confirm" id="confirm-wrap">
+    <div style="width:48px;height:48px;background:#e8f5e9;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <h2>Request received!</h2>
+    <p style="margin-top:8px;">Thanks for reaching out. We'll review your info and get back to you within a few hours with a quote.</p>
+    <p style="margin-top:1.25rem;font-size:13px;color:#888;">Don't forget to text a few photos of the items to <strong style="color:#333;">(779) 269-7043</strong></p>
+  </div>
+
+</div>
+<script>
+  (function populateDates() {
+    var offsets = [0, 1, 4, 8, 12, 13];
+    var dayNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    var today = new Date();
+    today.setHours(0,0,0,0);
+
+    var sixMonths = new Date(today.getFullYear(), today.getMonth() + 6, today.getDate());
+
+    var seen = {};
+    var dates = [];
+
+    var cy = 2026, cm = 3, cd = 12;
+
+    while (true) {
+      var cycleDate = new Date(cy, cm, cd);
+      if (cycleDate > sixMonths) break;
+
+      for (var i = 0; i < offsets.length; i++) {
+        var d = new Date(cy, cm, cd + offsets[i]);
+        var key = d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate();
+        if (d >= today && d <= sixMonths && !seen[key]) {
+          seen[key] = true;
+          dates.push(new Date(d.getFullYear(), d.getMonth(), d.getDate()));
+        }
+      }
+
+      cd += 14;
+      var next = new Date(cy, cm, cd);
+      cy = next.getFullYear();
+      cm = next.getMonth();
+      cd = next.getDate();
+    }
+
+    dates.sort(function(a, b) { return a - b; });
+
+    var sel = document.getElementById('date');
+    for (var j = 0; j < dates.length; j++) {
+      var d = dates[j];
+      var label = dayNames[d.getDay()] + ', ' + monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+      var opt = document.createElement('option');
+      opt.value = label;
+      opt.textContent = label;
+      sel.appendChild(opt);
+    }
+  })();
+
+  var form = document.getElementById('intake-form');
+  var btn = document.getElementById('submit-btn');
+  var errorMsg = document.getElementById('error-msg');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    errorMsg.style.display = 'none';
+
+    var data = new FormData(form);
+
+    try {
+      var res = await fetch('https://formspree.io/f/mykbvkjd', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('form-wrap').style.display = 'none';
+        document.getElementById('confirm-wrap').style.display = 'block';
+      } else {
+        throw new Error('error');
+      }
+    } catch(e) {
+      errorMsg.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Submit job request';
+    }
+  });
+</script>
+</body>
+</html>
